@@ -12,4 +12,6 @@ Success with search in google with keyword=hello
 *** Keywords ***
 Go to google.com
     Open Browser    https://www.google.com   browser=chrome
+    ...  options=add_experimental_option("detach", True)
+
     Maximize Browser Window
