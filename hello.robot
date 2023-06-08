@@ -12,10 +12,12 @@ Success with search in google with keyword=hello
     Found result with hello
 
 *** Keywords ***
+Found result with hello
+    Wait Until Page Contains    hello
+
 Search with keyword=hello
     Input Text    name:q    hello
     Press Keys    name:q    RETURN
-
 
 Go to google.com
     Open Browser    chrome://settings/   browser=${TARGET}    
