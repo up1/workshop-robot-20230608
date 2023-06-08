@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}   http://www.google.com
+${TARGET}   chrome
 
 *** Test Cases ***
 Success with search in google with keyword=hello
@@ -11,8 +12,13 @@ Success with search in google with keyword=hello
     Found result with hello
 
 *** Keywords ***
+Search with keyword=hello
+    Input Text    name:q    hello
+    Press Keys    name:q    RETURN
+
+
 Go to google.com
-    Open Browser    chrome://settings/   browser=gc   
+    Open Browser    chrome://settings/   browser=${TARGET}    
     ...    options=add_experimental_option("detach", True)
     Go To    ${URL}
     Maximize Browser Window
