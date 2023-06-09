@@ -2,29 +2,23 @@
 Library   SeleniumLibrary
 Suite Setup   เข้าไปยังหน้า Login
 Test Teardown   กลับไปยังหน้าแรก
+Test Template   Template for login failed
 
 *** Test Cases ***
-Login fail with empty username
-    [Tags]  done   feature1
-    ทำการกรอกข้อมูล user=${EMPTY} และ password=mode2
-    ผลการ login ผิดพลาด แสดงหน้า error
-
-Login fail with wrong password
-    [Tags]  done   feature1
-    ทำการกรอกข้อมูล user=demo และ password=mode2
-    ผลการ login ผิดพลาด แสดงหน้า error
-
-Login fail with wrong username
-    [Tags]  testing   feature1
-    ทำการกรอกข้อมูล    demo2    mode
-    ผลการ login ผิดพลาด แสดงหน้า error
+#---------------------------------------------------------------
+#      Case name            |       User name  |     Password  |
+#---------------------------------------------------------------
+Wrong username                    demo2                mode
+Wrong password                    demo                 mode2
+Wrong username and password       demo2                mode2
+Empty username                    ${EMPTY}             mode
+Empty password                    demo                 ${EMPTY}
 
 *** Keywords ***
-ทำการกรอกข้อมูล
+Template for login failed
     [Arguments]   ${username}   ${password}
-    Input Text    id:username_field    ${username}
-    Input Text    id:password_field    ${password}
-    Click Element    id:login_button
+    ทำการกรอกข้อมูล user=${username} และ password=${password}
+    ผลการ login ผิดพลาด แสดงหน้า error
 
 ทำการกรอกข้อมูล user=${username} และ password=${password}
     Input Text    id:username_field    ${username}
