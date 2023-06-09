@@ -1,8 +1,9 @@
 *** Settings ***
-Library   SeleniumLibrary
-Suite Setup   เข้าไปยังหน้า Login
+Library         SeleniumLibrary
+Suite Setup     เข้าไปยังหน้า Login
 Test Teardown   กลับไปยังหน้าแรก
 Test Template   Template for login failed
+Suite Teardown  Close Browser
 
 *** Test Cases ***
 #---------------------------------------------------------------
