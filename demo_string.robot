@@ -13,3 +13,5 @@ Try to split data
    Log To Console    ${words[3]}
    Should Be Equal     ${words[0]}    ผลการค้นหาประมาณ
    Should Be Equal     ${words[2]}    รายการ
+   Should Start With   ${words[3]}    (
+   Should End With       ${words[3]}    )
