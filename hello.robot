@@ -14,6 +14,8 @@ Success with search in google with keyword=hello
 *** Keywords ***
 Found result with hello
     Wait Until Page Contains    hello
+    ${result}=  Get Text    id:result-stats
+    Log To Console    ${result}
 
 Search with keyword=hello
     Input Text    name:q    hello
