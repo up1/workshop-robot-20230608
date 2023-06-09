@@ -3,11 +3,13 @@ Library   SeleniumLibrary
 
 *** Test Cases ***
 Login fail with wrong password
+    [Tags]  done   feature1
     เข้าไปยังหน้า Login
     ทำการกรอกข้อมูล user=demo และ password=mode2
     ผลการ login ผิดพลาด แสดงหน้า error
 
 Login fail with wrong username
+    [Tags]  testing   feature1
     เข้าไปยังหน้า Login
     ทำการกรอกข้อมูล    demo2    mode
     ผลการ login ผิดพลาด แสดงหน้า error
