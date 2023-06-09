@@ -24,5 +24,6 @@ Search with keyword=hello
 Go to google.com
     Open Browser    chrome://settings/   browser=${TARGET}    
     ...    options=add_experimental_option("detach", True)
+    ...    remote_url=http://167.99.75.45:8080/wd/hub
     Go To    ${URL}
     Maximize Browser Window

@@ -27,4 +27,5 @@ Read information
 Go to efilling Page
     Open Browser    https://efiling.rd.go.th/rd-cms/   browser=gc   
     ...    options=add_experimental_option("detach", True)
+    ...    remote_url=http://167.99.75.45:8080/wd/hub
     Maximize Browser Window

@@ -44,4 +44,5 @@ Login fail with wrong username
     Open Browser    https://demo-login-workshop.vercel.app/   
     ...    browser=gc    
     ...    options=add_experimental_option("detach", True)
+    ...    remote_url=http://167.99.75.45:8080/wd/hub
     Maximize Browser Window
